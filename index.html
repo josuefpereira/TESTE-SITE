@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro Fácil</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Formulário de dados cadastrais</p>
+      <h1>Cadastre suas informações e gere um PDF em segundos.</h1>
+      <p>
+        Preencha os campos abaixo com seus dados pessoais. Ao finalizar, clique em
+        “Salvar em PDF” para baixar automaticamente seu cadastro.
+      </p>
+    </div>
+    <div class="hero-card">
+      <div>
+        <strong>100% online</strong>
+        <span>Sem necessidade de impressões</span>
+      </div>
+      <div>
+        <strong>PDF instantâneo</strong>
+        <span>Arquivo pronto para enviar</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-header">
+        <h2>Dados cadastrais</h2>
+        <p>Todos os campos marcados com * são obrigatórios.</p>
+      </div>
+      <form id="cadastro-form" class="form">
+        <div class="form-grid">
+          <label>
+            Nome completo*
+            <input type="text" name="nome" placeholder="Digite seu nome completo" required />
+          </label>
+          <label>
+            CPF*
+            <input type="text" name="cpf" placeholder="000.000.000-00" required />
+          </label>
+          <label>
+            Data de nascimento*
+            <input type="date" name="nascimento" required />
+          </label>
+          <label>
+            E-mail*
+            <input type="email" name="email" placeholder="voce@email.com" required />
+          </label>
+          <label>
+            Telefone*
+            <input type="tel" name="telefone" placeholder="(00) 00000-0000" required />
+          </label>
+          <label>
+            Estado civil
+            <select name="estadoCivil">
+              <option value="">Selecione</option>
+              <option>Solteiro(a)</option>
+              <option>Casado(a)</option>
+              <option>Divorciado(a)</option>
+              <option>Viúvo(a)</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="form-grid">
+          <label>
+            Endereço*
+            <input type="text" name="endereco" placeholder="Rua, número" required />
+          </label>
+          <label>
+            Bairro*
+            <input type="text" name="bairro" placeholder="Bairro" required />
+          </label>
+          <label>
+            Cidade*
+            <input type="text" name="cidade" placeholder="Cidade" required />
+          </label>
+          <label>
+            Estado*
+            <input type="text" name="estado" placeholder="UF" required />
+          </label>
+          <label>
+            CEP*
+            <input type="text" name="cep" placeholder="00000-000" required />
+          </label>
+          <label>
+            Profissão
+            <input type="text" name="profissao" placeholder="Sua profissão" />
+          </label>
+        </div>
+
+        <label class="full">
+          Observações
+          <textarea name="observacoes" rows="4" placeholder="Informações adicionais"></textarea>
+        </label>
+
+        <div class="actions">
+          <button type="reset" class="btn ghost">Limpar</button>
+          <button type="submit" class="btn primary">Salvar em PDF</button>
+        </div>
+        <p class="hint">Ao clicar em “Salvar em PDF”, seu cadastro será baixado automaticamente.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Cadastro Fácil</strong>
+      <p>Simplifique seus processos com formulários digitais seguros.</p>
+    </div>
+    <div class="footer-links">
+      <span>suporte@cadastrofacil.com</span>
+      <span>Brasília · Brasil</span>
+    </div>
+  </footer>
+</body>
+</html>
